@@ -53,7 +53,7 @@ class SudokuGame
     board[pos] = val
   end
 
-  def run
+  def play
     play_turn until solved?
     board.render
     puts "Congratulations, you win!"
@@ -80,3 +80,4 @@ end
 
 
 game = SudokuGame.from_file("puzzles/sudoku1.txt")
+game.play
